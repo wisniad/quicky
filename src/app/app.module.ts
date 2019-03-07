@@ -12,6 +12,8 @@ import { DatabaseService } from './services/database.service';
 import { AmazingTimePickerModule } from 'amazing-time-picker';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     AppRoutingModule,
     FormsModule,
     AmazingTimePickerModule,
+    BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
   ],
   providers: [DatabaseService],
