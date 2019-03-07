@@ -25,12 +25,9 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     AppRoutingModule,
     FormsModule,
     AmazingTimePickerModule,
-  ],
-  providers: [DatabaseService],
-  bootstrap: [AppComponent]
     MDBBootstrapModule.forRoot(),
   ],
-  providers: [],
+  providers: [DatabaseService],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ],
 })

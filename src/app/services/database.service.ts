@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class DatabaseService {
 
-  memory = {}
+  memory = {
+    quickyList : [],
+  }
 
   constructor() { }
 
