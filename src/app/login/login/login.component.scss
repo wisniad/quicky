@@ -1,6 +1,7 @@
 
+// --- okno logowania --- //
 .login {
-    overflow: hidden;
+    //overflow: hidden;
     background-color: white;
     padding: 40px 30px 30px 30px;
     border-radius: 10px;
@@ -16,34 +17,15 @@
     -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
     -moz-transition: -moz-transform 300ms, box-shadow 300ms;
   }
-  .login::before, .login::after {
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    border-top-left-radius: 40%;
-    border-top-right-radius: 45%;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 40%;
+
+  // --- logo --- //
+  .logo {
+    left: 50%;
+    top: 50%;
+
   }
-  .login::before {
-    left: 40%;
-    bottom: -130%;
-    background-color:rgba(23, 233, 223, 1);
-    -webkit-animation: wawes 15s infinite linear;
-    -moz-animation: wawes 15s infinite linear;
-    animation: wawes 15s infinite linear;
-    z-index: -1;
-  }
-  .login::after {
-    left: 35%;
-    bottom: -125%;
-    background-color:rgba(255, 180, 143, 0.4);
-    -webkit-animation: wawes 17s infinite;
-    -moz-animation: wawes 17s infinite;
-    animation: wawes 17s infinite;
-    z-index: -2;
-  }
+
+  // --- pola logowania --- //
   .login > input {
     font-family: "Asap", sans-serif;
     display: block;
@@ -57,6 +39,8 @@
     margin: 15px -10px;
     z-index: 1;
   }
+
+  // --- przycisk --- //
   .login > button {
     font-family: "Asap", sans-serif;
     cursor: pointer;
@@ -69,7 +53,7 @@
     margin-top: 10px;
     margin-left: -5px;
     border-radius: 5px;
-    background-color: rgba(23, 233, 223, 1);
+    background-color: #A64AC9;
     -webkit-transition: background-color 300ms;
     -moz-transition: background-color 300ms;
     transition: background-color 300ms;
@@ -78,38 +62,6 @@
     background-color: rgba(23, 233, 223, 0.5);
   }
   
-  @-webkit-keyframes wawes {
-    from {
-      -webkit-transform: rotate(0);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  @-moz-keyframes wawes {
-    from {
-      -moz-transform: rotate(0);
-    }
-    to {
-      -moz-transform: rotate(360deg);
-    }
-  }
-  @keyframes wawes {
-    from {
-      -webkit-transform: rotate(0);
-      -moz-transform: rotate(0);
-      -ms-transform: rotate(0);
-      -o-transform: rotate(0);
-      transform: rotate(0);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
   a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
@@ -117,4 +69,75 @@
     right: 10px;
     bottom: 10px;
     font-size: 12px;
+  }
+
+  html, body {
+    height: 100%;
+  }
+  
+  .box {
+    width: 100%;
+    height: 1500px;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .wave {
+    opacity: .4;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    background: #A64AC9;
+    width: 2500px;
+    height: 2500px;
+    margin-left: -250px;
+    margin-top: -250px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000s infinite linear;
+  }
+  
+  .wave.-three {
+    animation: drift 15000ms infinite linear;
+  }
+  
+  .wave.-two {
+    animation: drift 17000ms infinite linear;
+    opacity: .1;
+    background: #FCCD04;
+  }
+  
+  .box:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(#17e9e0, 0.55), rgba(#def, 0.2) 80%, rgba(white, .5));
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    line-height: 300px;
+    text-align: center;
+    transform: translate3d(0, 0, 0);
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: .4em;
+    font-size: 24px;
+    text-shadow: 0 1px 0 rgba(black, .1);
+    text-indent: .3em;
+  }
+  @keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
   }
