@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,6 +9,7 @@ import { InterfaceComponent } from './main/interface/interface.component';
 import { QuickyComponent } from './main/quicky/quicky.component';
 import { AddQuickyComponent } from './main/add-quicky/add-quicky.component';
 import { DatabaseService } from './services/database.service';
+import { AmazingTimePickerModule } from 'amazing-time-picker';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DatabaseService } from './services/database.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AmazingTimePickerModule,
   ],
   providers: [DatabaseService],
   bootstrap: [AppComponent]

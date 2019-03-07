@@ -1,3 +1,28 @@
-<p>
-  add-quicky works!
-</p>
+<div *ngIf="addNew" class="card">
+  <div>
+    <button>USER</button>
+    <select [(ngModel)]="timeForDecision">
+      <option *ngFor="let time of timeSpaces" [value]="time" required>
+        {{time}}
+      </option>
+    </select>
+    <button>X</button>
+  </div>
+  <div>
+    <div style="width: 300px; height: 300px; background-color: cadetblue">Choose</div>
+  </div>
+  <div>
+    <button (click)="open()">Time</button>
+    <input type="time" value="{{chosenTime}}">
+    <button (click)="addTime()">+</button>
+
+    <p *ngFor="let time of addedTimes">{{time}} <button (click)="removeTime(time)">X</button></p>
+  </div>
+  <div>
+    <textarea [(ngModel)]="quickyDescription" placeholder="Type description"></textarea>
+  </div>
+  <div>
+    <button>Discard changes</button>
+    <button (click)="addQuicky()">Save Quicky</button>
+  </div>
+</div>
