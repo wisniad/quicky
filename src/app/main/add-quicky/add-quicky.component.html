@@ -2,7 +2,7 @@
   <div>
     <button>USER</button>
     <select [(ngModel)]="timeForDecision">
-      <option *ngFor="let time of timeSpaces" [value]="time" required>
+      <option *ngFor="let time of timeSpaces" [value]="time">
         {{time}}
       </option>
     </select>

@@ -1,3 +1,4 @@
+import { DatabaseService } from './../../services/database.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterfaceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: DatabaseService) { }
 
   ngOnInit() {
+    this.db.loadDataFromLocalStorage();
   }
 
 }

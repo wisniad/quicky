@@ -1,3 +1,4 @@
+import { DatabaseService } from './../../services/database.service';
 import { Component, OnInit } from '@angular/core';
 import { AmazingTimePickerService } from 'amazing-time-picker';
 @Component({
@@ -24,7 +25,8 @@ export class AddQuickyComponent implements OnInit {
   // current chosen time on clock
   chosenTime;
 
-  constructor(private atp: AmazingTimePickerService) { }
+  constructor(private atp: AmazingTimePickerService,
+    private db: DatabaseService) { }
 
   ngOnInit() {
     this.currentTime = new Date().getHours() + ':';
@@ -45,8 +47,12 @@ export class AddQuickyComponent implements OnInit {
       description: this.quickyDescription,
 
     }
+    this.db.memory.quickyList.push(quicky);
 
     console.log('New quicky', quicky);
+
+    console.log('all quickies', this.db.memory.quickyList);
+    this.db.saveDataToLocalStorage();
   }
 
   open() {
