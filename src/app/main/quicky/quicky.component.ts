@@ -21,6 +21,8 @@ import * as kf from './keyframes';
 })
 export class QuickyComponent implements OnInit {
 
+
+
   constructor() { }
 
   ngOnInit() {
