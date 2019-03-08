@@ -11,6 +11,10 @@ import { AddQuickyComponent } from './main/add-quicky/add-quicky.component';
 import { DatabaseService } from './services/database.service';
 import { AmazingTimePickerModule } from 'amazing-time-picker';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +30,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     FormsModule,
     AmazingTimePickerModule,
     MDBBootstrapModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase, 'quicky'),
+    AngularFirestoreModule
   ],
   providers: [DatabaseService],
   bootstrap: [AppComponent],
