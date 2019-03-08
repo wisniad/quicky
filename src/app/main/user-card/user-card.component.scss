@@ -1,0 +1,124 @@
+$frame-width: 300px;
+$frame-height: 300px;
+$button-width: 200px;
+$button-height: 30px;
+$name-font-size: 20px;
+$rightPanelBoxHeight: 112px;
+$rightPanelBoxTop: -10px;
+$jobTitle-font-size: 15px;
+$fioletowy: #A64AC9;
+$cyan: #17e9e0;
+
+
+.frame {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  width: $frame-width;
+  height: $frame-height;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+}
+.profile {
+  height: 100%;
+  float: left;
+  width: 200px;
+  .photo {
+    margin-top: 30px;
+    .image {
+      .circle {
+        box-sizing: border-box;
+        width: 76px;
+        height: 76px;
+        top: -3px;
+        left: -3px;
+        border: 2px solid black;
+        border-color: $cyan transparent $fioletowy transparent;
+        border-radius: 50%;
+        margin-left:65px;
+        transition: all 1.5s ease-in-out;
+
+      }
+      &:hover {
+        cursor: pointer;
+        .circle {
+          transform: rotate(360deg);
+        }
+      }
+      img {
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        background: #f5e8df;
+        margin-top: 3px;
+        margin-left:67px;
+      }
+    }
+  }
+  .name {
+    color: $cyan;
+    margin-top: 15px;
+    font-size: $name-font-size;
+    font-weight: bold;
+  }
+  .jobTitle {
+    color: $cyan;
+    margin-top: -15px;
+    font-size: $jobTitle-font-size;
+  }
+  .buttons {
+    margin-top: 50px;
+
+    .btn {
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 15px;
+      width: 120px;
+      height: 30px;
+      border: 1px solid $cyan;
+      font-size: 12px;
+      text-align: center;
+      line-height: 5px;
+      color: $cyan;
+      background: none;
+      &:hover {
+        background: #17e9df25;
+        color: black;
+      }
+    }
+  }
+}
+.stats {
+  float: right;
+  .box {
+    color: white;
+    box-sizing: border-box;
+    background: #f5e8df;
+    width: 100px;
+    height: 98.5px;
+    background-color: rgba(165, 74, 201, 0.568);
+    padding-top: 38px;
+    &:nth-child(2) {
+      margin: 2px 0;
+    }
+    &:hover {
+      background: #A64AC9;
+      cursor: pointer;
+    }
+  }
+  span {
+    display: block;
+  }
+
+  .value {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .parameter {
+    color: white;;
+    font-size: 11px;
+  }
+}

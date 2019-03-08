@@ -43,22 +43,22 @@
   .login > button {
     font-family: "Asap", sans-serif;
     cursor: pointer;
-    color: #fff;
+    color: #A64AC9;
     font-size: 16px;
     text-transform: uppercase;
-    width: 80px;
+    width: 100%;
     border: 0;
     padding: 10px 0;
     margin-top: 10px;
     margin-left: -5px;
     border-radius: 5px;
-    background-color: #A64AC9;
+    background-color: #fff;
     -webkit-transition: background-color 300ms;
     -moz-transition: background-color 300ms;
     transition: background-color 300ms;
   }
   .login > button:hover {
-    background-color: rgba(23, 233, 223, 0.5);
+    background-color: rgba(160, 156, 161, 0.2);
   }
   
   a {

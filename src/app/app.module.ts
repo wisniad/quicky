@@ -14,6 +14,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { UserCardComponent } from './main/user-card/user-card.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     LoginComponent,
     InterfaceComponent,
     QuickyComponent,
-    AddQuickyComponent
+    AddQuickyComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,
