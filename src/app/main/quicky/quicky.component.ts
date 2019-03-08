@@ -5,10 +5,13 @@ import * as kf from './keyframes';
 import { Component, ViewChild, OnInit } from '@angular/core';
 
 
-import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
-  SwiperScrollbarInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
+import {
+  SwiperComponent, SwiperDirective, SwiperConfigInterface,
+  SwiperScrollbarInterface, SwiperPaginationInterface
+} from 'ngx-swiper-wrapper';
+import { Quick } from './Quick';
 
- 
+
 
 @Component({
   selector: 'app-quicky',
@@ -30,13 +33,10 @@ export class QuickyComponent implements OnInit {
 
   public show: boolean = true;
 
-  public slides = [
-    'First slide',
-    'Second slide',
-    'Third slide',
-    'Fourth slide',
-    'Fifth slide',
-    'Sixth slide'
+  public slides: Quick[] = [
+    { nazwa: 'Burger', opis: 'jedzenie', godziny: '12:00', osoba: 'Izabela' },
+    { nazwa: 'Papieros', opis: 'przerwa', godziny: '13:00', osoba: 'Damian' },
+    { nazwa: 'Spacer', opis: 'aktywność', godziny: '14:00', osoba: 'Rafał' },
   ];
 
   public type: string = 'component';
@@ -53,9 +53,9 @@ export class QuickyComponent implements OnInit {
     navigation: false,
     pagination: false,
     spaceBetween: 60,
-    loop:true,
-    slideToClickedSlide:true
-  
+    loop: true,
+    slideToClickedSlide: true
+
   };
 
   private scrollbar: SwiperScrollbarInterface = {
@@ -72,9 +72,6 @@ export class QuickyComponent implements OnInit {
 
   @ViewChild(SwiperComponent) componentRef?: SwiperComponent;
   @ViewChild(SwiperDirective) directiveRef?: SwiperDirective;
-
-
-
 
 
   constructor() { }
