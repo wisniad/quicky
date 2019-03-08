@@ -16,6 +16,20 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'vertical',
+  observer: true,
+  threshold: 50,
+  spaceBetween: 5,
+  slidesPerView: 3,
+  centeredSlides: true
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,11 +43,17 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AppRoutingModule,
     FormsModule,
     AmazingTimePickerModule,
+    BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
+    SwiperModule,
     AngularFireModule.initializeApp(environment.firebase, 'quicky'),
     AngularFirestoreModule
   ],
-  providers: [DatabaseService],
+  providers: [DatabaseService,
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ],
 })

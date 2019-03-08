@@ -1,22 +1,32 @@
-<div>
-  <div>
-    <button>USER</button>
-    <span>Licznik</span>
-    <button>X</button>
-  </div>
-  <div>
-    <div style="width: 300px; height: 300px; background-color: cadetblue">BURGER</div>
-  </div>
-  <div>
-    <p>Czas1</p>
-    <p>Czas2</p>
-    <p>Czas3</p>
-  </div>
-  <div>
-    <p>Type something</p>
-  </div>
-  <div>
-    <button>X</button>
-    <button>Serduszko</button>
+<div class="flex-container">
+  <div class="vertical-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="50%">
+    <div class="box-title">Swiper</div>
+
+    <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
+      <swiper *ngIf="type == 'component' && show" class="swiper-container " fxFlex="auto" [config]="config"
+        [disabled]="disabled">
+        <div *ngFor="let slide of slides" class="swiper-slide">
+          <div class="card card-cascade">
+
+            <div class="view view-cascade overlay">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/men.jpg" alt="Card image cap">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body card-body-cascade text-center">
+              <h4 class="card-title"><strong> {{slide.nazwa}} </strong></h4>
+              <h6 class="font-weight-bold indigo-text py-2">{{slide.godziny}}</h6>
+              <p class="card-text"> {{slide.opis}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </swiper>
+
+    </div>
   </div>
 </div>
+
+
+<!-- https://github.com/zefoy/ngx-swiper-wrapper -->

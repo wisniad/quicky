@@ -1,0 +1,63 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .flex-container >div{
+    width: 1000px;
+    padding-top: 100px;
+  }
+ 
+  .box-title {
+    font-size: 20px;
+  }
+
+  
+  .action-container,
+  .content-container {
+    position: relative;
+    overflow: auto;
+    height: 600px;
+    min-height: 0;
+    margin: 8px 16px;
+    border-radius: 4px;
+  
+    background-color: #fff;
+  }
+  
+  .action-container {
+    padding: 16px;
+  }
+  
+  .vertical-container,
+  .horizontal-container {
+    min-height: 0 !important;
+  }
+  
+
+  .swiper-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+  }
+  
+  .swiper-slide {
+    color: #aaa;
+    background-color: #eee;
+   
+  }
+  
+  .swiper-slide-active .card{
+    color: rgb(17, 16, 16);
+    background-color: #A64Ac9;
+    height: 500px;
+
+  }
+
+
+
