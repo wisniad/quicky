@@ -84,14 +84,14 @@
   }
   
   .wave {
-    opacity: .4;
+    opacity: .6;
     position: absolute;
     top: 5%;
     left: 50%;
     background: #A64AC9;
     width: 2500px;
     height: 2500px;
-    margin-left: -250px;
+    margin-left: -350px;
     margin-top: -250px;
     transform-origin: 50% 48%;
     border-radius: 43%;
@@ -115,7 +115,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(#17e9e0, 0.55), rgba(#def, 0.2) 80%, rgba(white, .5));
+    background: linear-gradient(to bottom, rgba(#17e9e0, 0.75), rgba(#def, 0.2) 80%, rgba(white, .5));
     z-index: 11;
     transform: translate3d(0, 0, 0);
   }
