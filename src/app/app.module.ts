@@ -11,6 +11,10 @@ import { AddQuickyComponent } from './main/add-quicky/add-quicky.component';
 import { DatabaseService } from './services/database.service';
 import { AmazingTimePickerModule } from 'amazing-time-picker';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwiperModule } from 'ngx-swiper-wrapper';
@@ -41,7 +45,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AmazingTimePickerModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
-    SwiperModule
+    SwiperModule,
+    AngularFireModule.initializeApp(environment.firebase, 'quicky'),
+    AngularFirestoreModule
   ],
   providers: [DatabaseService,
     {
