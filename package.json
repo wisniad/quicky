@@ -24,6 +24,7 @@
     "angular-bootstrap-md": "^7.4.2",
     "chart.js": "^2.5.0",
     "core-js": "^2.5.4",
+    "firebase": "^5.8.6",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.3.3",
