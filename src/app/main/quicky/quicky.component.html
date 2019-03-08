@@ -24,7 +24,9 @@
 
 
 <div class="flex-container">
-  <div class="card card-cascade" >
+  <div class="card card-cascade" [@cardAnimator]="animationState" (@cardAnimator.done)="resetAnimationState()"
+    (swipeleft)="startAnimation('slideOutLeft')" (swiperight)="startAnimation('zoomOutRight')"
+    (swipeup)="startAnimation('rotateOutUpRight')" (swipedown)="startAnimation('flipOutY')">
     <!-- Card image -->
     <div class="view view-cascade overlay">
       <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/men.jpg" alt="Card image cap">
@@ -39,12 +41,12 @@
       <!-- Subtitle -->
       <h6 class="font-weight-bold indigo-text py-2">Web developer</h6>
       <!-- Text -->
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </p>
     </div>
   </div>
 
-  <div class="card card-cascade " >
+  <div class="card card-cascade ">
     <!-- Card image -->
     <div class="view view-cascade overlay">
       <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/men.jpg" alt="Card image cap">
@@ -59,7 +61,7 @@
       <!-- Subtitle -->
       <h6 class="font-weight-bold indigo-text py-2">Web developer</h6>
       <!-- Text -->
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </p>
     </div>
   </div>
@@ -79,7 +81,7 @@
       <!-- Subtitle -->
       <h6 class="font-weight-bold indigo-text py-2">Web developer</h6>
       <!-- Text -->
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </p>
     </div>
   </div>
@@ -89,4 +91,3 @@
 
 
 <!-- Card Regular -->
-
