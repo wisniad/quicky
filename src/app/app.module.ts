@@ -18,8 +18,12 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal',
-  slidesPerView: 'auto'
+  direction: 'vertical',
+  observer: true,
+  threshold: 50,
+  spaceBetween: 5,
+  slidesPerView: 3,
+  centeredSlides: true
 };
 
 @NgModule({

@@ -1,7 +1,14 @@
-import { Component, OnInit } from '@angular/core';
 
 import { trigger, keyframes, animate, transition } from '@angular/animations';
 import * as kf from './keyframes';
+
+import { Component, ViewChild, OnInit } from '@angular/core';
+
+
+import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
+  SwiperScrollbarInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
+
+ 
 
 @Component({
   selector: 'app-quicky',
@@ -20,6 +27,53 @@ import * as kf from './keyframes';
   ]
 })
 export class QuickyComponent implements OnInit {
+
+  public show: boolean = true;
+
+  public slides = [
+    'First slide',
+    'Second slide',
+    'Third slide',
+    'Fourth slide',
+    'Fifth slide',
+    'Sixth slide'
+  ];
+
+  public type: string = 'component';
+
+  public disabled: boolean = false;
+
+  public config: SwiperConfigInterface = {
+    a11y: true,
+    direction: 'horizontal',
+    slidesPerView: 3,
+    keyboard: true,
+    mousewheel: true,
+    scrollbar: false,
+    navigation: false,
+    pagination: false,
+    spaceBetween: 60,
+    loop:true,
+    slideToClickedSlide:true
+  
+  };
+
+  private scrollbar: SwiperScrollbarInterface = {
+    el: '.swiper-scrollbar',
+    hide: false,
+    draggable: true
+  };
+
+  private pagination: SwiperPaginationInterface = {
+    el: '.swiper-pagination',
+    clickable: true,
+    hideOnClick: false
+  };
+
+  @ViewChild(SwiperComponent) componentRef?: SwiperComponent;
+  @ViewChild(SwiperDirective) directiveRef?: SwiperDirective;
+
+
 
 
 
